@@ -32,7 +32,7 @@ def linked_list_methods():
     results['case8'] = ll.get(5)
     results['case9'] = ll.add(0)
     results['case10'] = ll.get(2)
-    results['case11'] = ll.get(5)
+    results['case11'] = ll.get(5)     # Здесь вместо 7 выдает 8, хотя по индексу 5 уже должна лежать 7
     results['case12'] = ll.append(4)
     return results
 
