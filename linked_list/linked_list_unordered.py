@@ -124,7 +124,7 @@ class UnorderedList:
             raise IndexError
         current = self.head
         previous = None
-        while self.index(current.get_data()) != index:      # этот метод просто скопировал. разберусь "потом"
+        while self.index(current.get_data()) != index:
             previous = current
             current = current.get_next()
         item = current.get_data()
