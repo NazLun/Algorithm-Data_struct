@@ -1,6 +1,3 @@
-'''реализация из инета
-https://aliev.me/runestone/BasicDS/ImplementinganUnorderedListLinkedLists.html  '''
-
 class Node:
     def __init__(self, init_data):
         self.data = init_data
@@ -113,7 +110,7 @@ class UnorderedList:
                 if current is None:
                     break
             node.set_next(current)    # порядок этой и след строки не важен, т.к. current не теряется из памяти,
-            prev.set_next(node)       # а остается в переменной current
+            prev.set_next(node)
 
     def pop(self, index=None):
         if index is None:
@@ -133,6 +130,5 @@ class UnorderedList:
         else:
             previous.set_next(current.get_next())
         return item
-
 
 
