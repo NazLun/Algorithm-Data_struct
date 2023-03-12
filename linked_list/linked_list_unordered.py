@@ -1,5 +1,3 @@
-'''реализация из инета
-https://aliev.me/runestone/BasicDS/ImplementinganUnorderedListLinkedLists.html  '''
 
 class Node:
     def __init__(self, init_data):
@@ -33,7 +31,7 @@ class UnorderedList:
         return str(print_list)
 
     def is_empty(self):
-        return self.head==None
+        return self.head is None
 
     def add(self, item):
         node = Node(item)
@@ -43,14 +41,14 @@ class UnorderedList:
     def size(self):      # size, search, remove основаны на обходе списка, поэтому работают за O(N)
         count = 0                       # поочередное посещение каждого узла
         current = self.head
-        while current != None:
+        while current is not None:
             current = current.get_next()
             count += 1
         return count
 
     def search(self, item):
         current = self.head
-        while current != None:
+        while current is not None:
             if current.get_data() == item:
                 return True
             current = current.get_next()
@@ -74,7 +72,7 @@ class UnorderedList:
                 prev = current
                 current = current.get_next()
 
-            if prev == None:
+            if prev is None:
                 self.head = current.get_next()
             else:
                 prev.set_next(current.get_next())
@@ -124,7 +122,7 @@ class UnorderedList:
             raise IndexError
         current = self.head
         previous = None
-        while self.index(current.get_data()) != index:      # этот метод просто скопировал. разберусь "потом"
+        while self.index(current.get_data()) != index:
             previous = current
             current = current.get_next()
         item = current.get_data()
