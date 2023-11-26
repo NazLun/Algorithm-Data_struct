@@ -125,8 +125,8 @@ if __name__ == "__main__":
 # поэтому можно делать асинхронные задачи
 
 # Подключения к бд тоже касается это правило.
-# SQLite, redis, psycopg - Синхронная либа
-# aiosqlite, aioredis - асинхронная
+# SQLite, redis, psycopg - Синхронные либы
+# aiosqlite, aioredis, psycopg2 - асинхронные
 
 async def print1():
     print(1)
